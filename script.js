@@ -72,30 +72,30 @@
 
 
 
+//! For Loop Version
+// function threeSum(arr, target) {
+//     arr.sort((a, b,) => a - b);
+//     var newArr = [];
 
-function threeSum(arr, target) {
-    arr.sort((a, b,) => a - b);
-    var newArr = [];
+//     for (var i = 0; i < arr.length; i++) {
+//         for (var j = i + 1; j < arr.length; j++) {
+//             for (var k = j + 1; k < arr.length; k++) {
+//                 if (arr[i] + arr[j] + arr[k] === target) {
+//                     newArr.push([arr[i], arr[j], arr[k]]);
+//                 }
+//             }
+//         }
+//     }
+//     if (newArr.length == 0){
+//         return "No three numbers sum up to the target sum"
+//     }
+//     return newArr;
+// }
 
-    for (var i = 0; i < arr.length; i++) {
-        for (var j = i + 1; j < arr.length; j++) {
-            for (var k = j + 1; k < arr.length; k++) {
-                if (arr[i] + arr[j] + arr[k] === target) {
-                    newArr.push([arr[i], arr[j], arr[k]]);
-                }
-            }
-        }
-    }
-    if (newArr.lenth == 0){
-        return "No three numbers sum up to the target sum"
-    }
-    return newArr;
-}
-
-array = [-8, -6, 1, 2, 3, 5, 6, 12]
-targetSum = 0;
-var solve = threeSum([-8, -6, 1, 2, 3, 5, 6, 12], 0);
-console.log(solve);
+// array = [-8, -6, 1, 2, 3, 5, 6, 12]
+// targetSum = 0;
+// var solve = threeSum([-8, -6, 1, 2, 3, 5, 6, 12], 0);
+// console.log(solve);
 
 
 
@@ -113,5 +113,31 @@ console.log(solve);
 
 
 
+
+//! While Loop Version
+function threeSum(arr, target) {
+    arr.sort((a, b,) => a - b);
+    var newArr = [];
+
+    for (var i = 0; i < arr.length; i++) {
+        //
+        for (var j = i + 1; j < arr.length; j++) {
+            for (var k = j + 1; k < arr.length; k++) {
+                if (arr[i] + arr[j] + arr[k] === target) {
+                    newArr.push([arr[i], arr[j], arr[k]]);
+                }
+            }
+        }
+    }
+    if (newArr.length == 0){
+        return "No three numbers sum up to the target sum"
+    }
+    return newArr;
+}
+
+array = [-8, -6, 1, 2, 3, 5, 6, 12]
+targetSum = 0;
+var solve = threeSum([-8, -6, 1, 2, 3, 5, 6, 12], 0);
+console.log(solve);
 
 
